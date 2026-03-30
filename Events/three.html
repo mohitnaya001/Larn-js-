@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events in js </title>
+</head>
+<body>
+    <h1>Hi, Mohit sir</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const Setid = function(){
+        console.log("Hello, Mohit")
+    }
+    const start = document.getElementById('start').addEventListener('click',function(e){
+       const startme = setInterval(Setid,1000) 
+       document.getElementById('stop').addEventListener('click',function(e){
+         console.log("hii")
+         clearInterval(startme)
+    })
+    })
+</script>
+</html>
